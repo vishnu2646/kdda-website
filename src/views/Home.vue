@@ -6,7 +6,7 @@
         <h2>KRISHNAGIRI DRISTICT DEAF ASSOCIATION</h2>
         <span>or</span>
         <h2>KRISHNAGIRI DRISTICT DEAF TRUST</h2>
-        <button class="btn btn-info">About Us</button>
+        <button class="btn btn-info"><router-link class="navlink" to="/about" style="color:white;">About Us</router-link></button>
       </div>
     </div>
     <section class="who-section">

@@ -52,12 +52,12 @@
       <a href="javascript:void(0)" class="closebtn" v-on:click="closeNav"
         >&times;</a
       >
-      <router-link class="navlink" to="#">Home</router-link>
-      <router-link class="navlink" to="#">Objectives</router-link>
-      <router-link class="navlink" to="#">Achivements</router-link>
-      <router-link class="navlink" to="#">About</router-link>
-      <router-link class="navlink" to="#">Gallery</router-link>
-      <router-link class="navlink" to="#">Contact</router-link>
+      <router-link class="navlink" to="/">Home</router-link>
+      <router-link class="navlink" to="/objectives">Objectives</router-link>
+      <router-link class="navlink" to="/achivements">Achivements</router-link>
+      <router-link class="navlink" to="/about">About</router-link>
+      <router-link class="navlink" to="/gallery">Gallery</router-link>
+      <router-link class="navlink" to="/contact">Contact</router-link>
     </div>
   </nav>
 </template>

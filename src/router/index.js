@@ -6,6 +6,7 @@ import Gallery from '../views/Gallery.vue'
 import GalleryDetail from '../views/Gallery-detail.vue'
 import Objectives from '../views/Objectives.vue'
 import Achivements from '../views/Achivements.vue'
+import Form from '../views/Form.vue'
 
 Vue.use(VueRouter)
 
@@ -26,7 +27,7 @@ const routes = [
     component: Gallery
   },
   {
-    path: '/gallerypictures',
+    path: '/gallerypictures/:id',
     name: 'gallerydetail',
     component: GalleryDetail
   },
@@ -39,6 +40,11 @@ const routes = [
     path: '/achivements',
     name: 'achivements',
     component: Achivements
+  },
+  {
+    path: '/form',
+    name: 'form',
+    component: Form
   },
   {
     path: '/about',

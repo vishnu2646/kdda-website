@@ -9,25 +9,17 @@
                 </div>
     
                 <div class="col-xs-6 col-md-3">
-                    <h6>Categories</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                        <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                        <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                        <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                        <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-                    </ul>
-                </div>
+                    
+                </div>  
     
                 <div class="col-xs-6 col-md-3">
                     <h6>Quick Links</h6>
                     <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/objectives">Objectives</a></li>
+                        <li><a href="/achivements">Achivements</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,7 +29,7 @@
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
                     <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-                        <a href="#">Scanfcode</a>.
+                        <a href="https://www.linkedin.com/in/vishnu-priyan0206/" target="_blank">VISHNU PRIYAN</a>.
                     </p>
                 </div>
     
@@ -64,7 +56,7 @@ export default {
 
 .site-footer
 {
-  background-color:#121212;
+  background-color:#ff007bf5;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
@@ -130,7 +122,10 @@ export default {
   margin-left:6px;
   margin-right:0;
   border-radius:100%;
-  background-color:#33353d
+  background-color:#33353d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .copyright-text
 {
@@ -216,8 +211,7 @@ export default {
 {
   background-color:#ea4c89
 }
-@media (max-width:767px)
-{
+@media (max-width:767px){
   .social-icons li.title
   {
     display:block;

@@ -25,7 +25,9 @@
                     </div>
                 </div>
                 <!-- <h6>1.<a href="/gallery1.html" class="text">Ngo-10th July 2015</a></h6> -->
-                <h6>1.<router-link class="link1" to="/gallerypictures">Ngo-10th July 2015</router-link></h6>
+                <h6 v-for="gallery of gallerys" :key="gallery.id">
+                    {{ gallery.id }}.<router-link class="link1" :to="{name:'gallerydetail', params:{id: gallery.id}}">{{ gallery.name }}</router-link>
+                </h6>
             </div>
         </div>
         <br>
@@ -36,12 +38,28 @@
 <script>
 import Footer from '../components/Footer.vue'
 import Navigation from '../components/Navigation.vue'
+import axios from 'axios'
 export default {
     name:"gallery",
     components: { 
         Navigation, 
         Footer 
     },
+
+    data(){
+        return{
+            gallerys:[]
+        };
+    },
+
+    async created(){
+        try{
+            const response = await axios.get(`http://localhost:8000/api/event-list/`);
+            this.gallerys = response.data
+        }catch(e){
+            console.error(e)
+        }
+    }
 }
 </script>
 

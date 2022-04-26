@@ -4,59 +4,12 @@
         <section class="contact-section mt-5">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-4">
-                        <div class="first py-2">
-                            <div class="icons1">
-                                <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
-                            </div>
-                            <div class="icon1-content">
-                                <h4>ADDRESS</h4>
-                                <p>4578 Marmora Road, Glasgow</p>
-                            </div>
-                        </div>
-                        <div class="first py-2">
-                            <div class="icons1">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                            </div>
-                            <div class="icon1-content">
-                                <h4>Phone</h4>
-                                <p>4578 Marmora Road, Glasgow</p>
-                            </div>
-                        </div>
-                        <div class="first py-2">
-                            <div class="icons1">
-                                <i class="fa fa-fax" aria-hidden="true"></i>
-                            </div>
-                            <div class="icon1-content">
-                                <h4>Fax</h4>
-                                <p>4578 Marmora Road, Glasgow</p>
-                            </div>
-                        </div>
-                        <div class="first py-2">
-                            <div class="icons1">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </div>
-                            <div class="icon1-content">
-                                <h4>Email</h4>
-                                <p>4578 Marmora Road, Glasgow</p>
-                            </div>
-                        </div>
-                        <div class="first py-2">
-                            <div class="icons1">
-                                <i class="fa fa-clock" aria-hidden="true"></i>
-                            </div>
-                            <div class="icon1-content">
-                                <h4>ADDRESS</h4>
-                                <p>4578 Marmora Road, Glasgow</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-12">
                         <div class="container py-5">
                             <div class="container contact">
-                                <p class="contact-text text-center">Please contact our Pro <span class="name"> Mr. Suresh Babu - 9443511638 </span></p>
-                                <p class="contact-text text-center">Our Translater for Deaf Sign Language Contact </p>
-                                <p class="contact-text text-center"><span class="name">Mr.Jeevanantham - 9994419798</span></p>
+                                <p class="contact-text text-center">Please contact our Pro <span class="name"> Mr. K.Suresh Babu - 9443511638 </span></p>
+                                <p class="contact-text text-center">Our Interpreter for Deaf Sign Language Contact </p>
+                                <p class="contact-text text-center"><span class="name">Mr. M. Jeevanantham - 9994419798</span></p>
                                 <p class="contact-text text-center"> KDDA E-mail : <a href="#"><span class="name">kddahosur@gmail.com</span></a></p>
                                 <p class="contact-text text-center"> KDDT E-mail : <a href="#"><span class="name">kddakddt@yahoo.com</span></a></p>
                             </div>
@@ -66,7 +19,7 @@
                             <div class="form">
                                 <form>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
+                                        <label for="exampleInputEmail1">Name</label>
                                         <input type="text" class="form-control" placeholder="Your Name">
                                     </div>
                                     <div class="form-group">
@@ -118,8 +71,8 @@ a{
 
 .first{
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 
 .icons1{

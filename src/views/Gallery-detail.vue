@@ -3,42 +3,12 @@
         <Navigation/>
         <br>
             <div class="container-fluid fade-in mt-5">
+                <div class="container">
+                    <div class="back"><router-link class="link1" to="/gallery"><i class="fas fa-arrow-left"></i> back</router-link></div>
+                </div>
                 <h3 class="text-center">Pictures</h3>
-                <div class="row"> 
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <img src="https://www.w3schools.com/w3images/wedding.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/rocks.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/falls2.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/paris.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/nature.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/mist.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/paris.jpg"  class="img-fluid">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <img src="https://www.w3schools.com/w3images/underwater.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/ocean.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/wedding.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/mountainskies.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/rocks.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/underwater.jpg"  class="img-fluid">
-                    </div>  
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <img src="https://www.w3schools.com/w3images/wedding.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/rocks.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/falls2.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/paris.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/nature.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/mist.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/paris.jpg"  class="img-fluid">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <img src="https://www.w3schools.com/w3images/underwater.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/ocean.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/wedding.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/mountainskies.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/rocks.jpg"  class="img-fluid">
-                        <img src="https://www.w3schools.com/w3images/underwater.jpg"  class="img-fluid">
-                    </div>
+                <div class="pic">
+                    <img v-for="image of gallery" :key="image.id" :src="image" class="img-fluid">
                 </div>
             </div>
             <br>
@@ -49,24 +19,46 @@
 <script>
 import Footer from '../components/Footer.vue'
 import Navigation from '../components/Navigation.vue'
+import axios from 'axios'
 export default {
     name:'gallerydetail',
     components: { 
         Navigation, 
         Footer 
     },
-
+    data(){
+        return{
+            id:this.$route.params.id,
+            gallery:[]
+        }
+    },
+    async created(){
+        const response = await axios.get(`http://localhost:8000/api/event-detail/${this.id}/`);
+        this.gallery = response.data.images
+    }
 }
 </script>
 
 <style scoped>
-.row > div {
-    padding: 0 4px !important;
-}
     
 img {
-    margin-top: 8px;
-    vertical-align: middle;
-            
+    margin: 20px;
+    width: 250px;
+    height: 250px;           
+}
+
+.pic{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-fluid > .container{
+    cursor: pointer;
+}
+
+.link1{
+    text-decoration: none;
+    color: black;
 }
 </style>
